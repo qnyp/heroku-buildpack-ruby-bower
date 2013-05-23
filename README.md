@@ -1,3 +1,5 @@
+# Please add issues to this repo. <3
+
 Heroku buildpack: Ruby
 ======================
 
