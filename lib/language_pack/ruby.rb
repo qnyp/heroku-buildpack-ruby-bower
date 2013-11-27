@@ -585,10 +585,9 @@ ERROR
   # install bower as npm module
   def install_bower
     log("bower") do
-      topic "Using bower version: #{BOWER_VERSION}"
       run("curl #{BOWER_BASE_URL}/bower-#{BOWER_VERSION}/node_modules.tar.gz -s -o - | tar xzf -")
       unless $?.success?
-        error "Can't install bower"
+        error "Can't install bower #{BOWER_VERSION}"
       end
     end
   end
