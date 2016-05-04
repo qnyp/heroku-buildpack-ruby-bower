@@ -37,6 +37,7 @@ module LanguagePack
           key   = file.basename.to_s
           value = file.read.strip
           user_env_hash[key] = value unless blacklist?(key)
+          ENV[key] = value unless blacklist?(key)
         end
       end
     end
