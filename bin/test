@@ -1,6 +1,6 @@
 #!/bin/bash
-# The actual `bin/compile` code lives in `bin/ruby_compile`. This file instead
-# bootstraps the ruby needed and then executes `bin/ruby_compile`
+# The actual `bin/test-compile` code lives in `bin/ruby_test-compile`. This file instead
+# bootstraps the ruby needed and then executes `bin/ruby_test-compile`
 
 BIN_DIR=$(cd $(dirname $0); pwd)
 ROOT_DIR=$(dirname $BIN_DIR)
@@ -16,6 +16,4 @@ if [ ! -d "$ROOT_DIR/vendor/ruby/$STACK" ]; then
   trap atexit EXIT
 fi
 
-export PATH=$ruby_dir/bin/:$PATH
-
-$ruby_dir/bin/ruby $BIN_DIR/ruby_compile $@
+$ruby_dir/bin/ruby $BIN_DIR/ruby_test $@
