@@ -1,14 +1,19 @@
 ## Master
 
-## v153 (01/18/2016)
+## v154 (03/01/2017)
+
+* Postgres database add-on will only be provisioned if app has a postgres driver in the `Gemfile`. (#535)
+* Fix regression, where JRuby patchlevel was being pulled from `Gemfile.lock` and used when not appropriate (#536)
+
+## v153 (01/18/2017)
 
 * Fix regression, where defaults would override user env with rake (#528)
 
-## v152 (01/18/2016)
+## v152 (01/18/2017)
 
 * Remove RAILS_GROUPS=assets from being set in .profile.d (#526)
 
-## v151 (01/16/2016)
+## v151 (01/16/2017)
 
 * Upgrade to bundler 1.13.7 (#519)
 * Vendor Default Ruby to execute the buildpack (#515)
